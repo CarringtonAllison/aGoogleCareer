@@ -16,14 +16,16 @@ module.exports = function (app) {
             // Load the Response into cheerio and save it to a variable
             // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
             let $ = cheerio.load(response.data);
+            // An empty array to save the data that we'll scrape
+            // With cheerio, find each p-tag with the "title" class
+            // (i: iterator. element: the current element)
             $("div.job_content").each(function (i, element) {
-                let results = {};
                 //create an empty object called results
+                let results = {};
                 // Save the text of the element into key value pairs to the results obj
                 results.title = $(this).children("a").children("h2").text().trim();
                 results.location = $(this).children("p").children("a.t_location_link.location").text().trim();
-                results.description = $(this).children("p.job_snippet").children("a").text().trim();
-
+                results.details = $(this).children("p.job_snippet").children("a").text().trim();
 
                 db.Post.create(results).then(function(data){
                     console.log(data)
@@ -33,8 +35,6 @@ module.exports = function (app) {
                 })
             });
 
-            // Log the results once you've looped through each of the elements found with cheerio
-            res.json(results)
         });
 
     })
