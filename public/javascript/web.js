@@ -6,9 +6,11 @@ $(document).ready(function(){
             $div.addClass("jobBox");
             $div.attr("data-value", data.link);
             let title = $("<h3>" + data.title + "</h3>");
+            title.addClass("searchTitle")
             let location = $("<h5>" + data.location + "</h5>");
+            location.addClass("location")
             let details = $("<p>" + data.details + "</p>");
-            
+            details.addClass("details")
             $div.append(title,location,details);
             $("#box").prepend($div);
         })
