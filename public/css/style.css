@@ -1,0 +1,17 @@
+#box {
+    color: blue; 
+    overflow-y: scroll; 
+    height: 300px; 
+}
+
+h1 {
+    text-align: center; 
+}
+
+h4 {
+    text-align: right; 
+}
+
+#searchRow {
+    margin: 20px auto; 
+}

@@ -12,6 +12,10 @@ let PostSchema = new mongoose.Schema({
     details: {
         type: String,
         required: true
+    },
+    link: {
+        type: String,
+        required: true
     }
 });
 
