@@ -5,8 +5,8 @@ $(document).ready(function(){
             let $div = $("<div>");
             $div.addClass("jobBox");
             $div.attr("data-value", data.link);
-            let title = $("<h2>" + data.title + "</h2>");
-            let location = $("<h4>" + data.location + "</h4>");
+            let title = $("<h3>" + data.title + "</h3>");
+            let location = $("<h5>" + data.location + "</h5>");
             let details = $("<p>" + data.details + "</p>");
             
             $div.append(title,location,details);
@@ -16,7 +16,7 @@ $(document).ready(function(){
 })
     
     
-$(document).on("click", "#jobSubmit", function(){
+$(document).on("submit", "#jobSearch", function(){
     console.log("working")
     event.preventDefault();
     $("#box").empty();  
@@ -29,8 +29,8 @@ $(document).on("click", "#jobSubmit", function(){
             let $div = $("<div>");
             $div.addClass("jobBox");
             $div.attr("data-value", data.link);
-            let title = $("<h2>" + data.title + "</h2>");
-            let location = $("<h4>" + data.location + "</h4>");
+            let title = $("<h3>" + data.title + "</3>");
+            let location = $("<h5>" + data.location + "</h5>");
             let details = $("<p>" + data.details + "</p>");
             
             $div.append(title,location,details);
