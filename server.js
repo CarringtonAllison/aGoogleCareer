@@ -23,7 +23,7 @@ require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
 
 // hosted mongo db info 
-const MONGODB_URI = proces.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 //connecting to the database
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
