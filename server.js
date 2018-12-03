@@ -22,8 +22,10 @@ app.use(express.static("public"));
 require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
 
+// hosted mongo db info 
+const MONGODB_URI = proces.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 //connecting to the database
-mongoose.connect("mongodb://localhost/aGoogleCareer", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 
 //engine running handlebars setting the default layout to main.handlebars
