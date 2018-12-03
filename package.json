@@ -5,6 +5,9 @@
   "repository": "git@github.com:CarringtonAllison/aGoogleCareer.git",
   "author": "Carrington Rain Allison <Carrington_Allison@yahoo.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
